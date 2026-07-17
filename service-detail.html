@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Detail - Montra</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="web icon" href="./assets/images/favicon.ico">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="navbar-container">
+            <div class="hero-container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="navbar-nav-container">
+                
+                    <!-- Logo Container -->
+                    <div class="logo-container">
+                        <a class="navbar-brand fw-bold" href="#">
+                            <img src="./assets/images/Montra-Logo.png" alt="Logo" class="img-fluid">
+                        </a>
+                    </div>
+                
+                    <!-- Nav Link Container -->
+                    <div class="nav-link-container">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./about.html">About Us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Services <i class="fa-solid fa-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./services.html">Service Overview</a></li>
+                                        <li><a class="dropdown-item" href="./service-detail.html">Service Detail</a></li>
+                                        <li><a class="dropdown-item" href="./pricing.html">Pricing</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Portfolio <i class="fa-solid fa-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./project.html">Showreel</a></li>
+                                        <li><a class="dropdown-item" href="./project-detail.html">Project Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Pages <i class="fa-solid fa-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./team.html">Crew</a></li>
+                                        <li><a class="dropdown-item" href="./testimonial.html">Testimonials</a></li>
+                                        <li><a class="dropdown-item" href="./blog.html">Blog</a></li>
+                                        <li><a class="dropdown-item" href="./single-post.html">Single Post</a></li>
+                                        <li><a class="dropdown-item" href="./404_page.html">404</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                
+                    <!-- Navbar Social Container -->
+                    <div class="navbar-cta-container">
+                        <div>
+                            <a href="./contact.html" class="btn btn-accent">Get a Quote</a>
+                        </div>
+                    </div>
+                
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Section -->
+    <aside>
+        <div class="sidebar-overlay"></div>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="./assets/images/Montra-Logo.png" class="logo" alt="Logo">
+                </div>
+                <button class="close-btn"><span>X</span></button>
+            </div>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li class="sidebar-dropdown">
+                    <div class="dropdown-header">
+                        <a href="#">Services</a>
+                        <button class="sidebar-dropdown-btn"><i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                    <ul class="sidebar-dropdown-menu">
+                        <li><a href="./services.html">Service Overview</a></li>
+                        <li><a href="./service-detail.html">Service Detail</a></li>
+                        <li><a href="./pricing.html">Pricing</a></li>
+                    </ul>
+                </li>         
+                <li class="sidebar-dropdown">
+                    <div class="dropdown-header">
+                        <a href="#">Portfolio</a>
+                        <button class="sidebar-dropdown-btn"><i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                    <ul class="sidebar-dropdown-menu">
+                        <li><a href="./project.html">Showreel</a></li>
+                        <li><a href="./project-detail.html">Project Detail</a></li>
+                    </ul>
+                </li>         
+                <li class="sidebar-dropdown">
+                    <div class="dropdown-header">
+                        <a href="#">Pages</a>
+                        <button class="sidebar-dropdown-btn"><i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                    <ul class="sidebar-dropdown-menu">
+                        <li><a href="./team.html">Crew</a></li>
+                        <li><a href="./testimonial.html">Testimonials</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./single-post.html">Single Post</a></li>
+                        <li><a href="./404_page.html">404</a></li>
+                    </ul>
+                </li>   
+                <li class="below-dropdown"><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Banner Inner Section -->
+        <section class="section banner-inner service-detail-banner">
+            <div class="banner-overlay"></div>
+            <div class="hero-container">
+                <div class="banner-inner-container">
+                    <h2>Video Production</h2>
+                    <nav class="breadcrumb">
+                        <a href="./index.html" class="breadcrumb-item">Home</a>
+                        <span class="separator">/</span>
+                        <span class="breadcrumb-item current">Service Detail</span>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Detail Section -->
+        <section class="section">
+            <div class="hero-container">
+                <div class="service-detail-content-container">
+                    <div class="service-detail-video-container">
+                        <!-- YouTube clip range: data-start / data-end use seconds. Example: start="5" end="12" → plays 00:05 to 00:12 in a loop. -->
+                        <div class="service-video-bg" data-video-id="pVA0G01aDfk" id="service-video-1" data-start="4" data-end="20"></div>
+                        <div class="service-detail-video-spacer"></div>
+                    </div>
+                    <div class="row row-cols-lg-2 row-cols-1 grid-spacer-2">
+                        <div class="col">
+                            <div class="heading-container">
+                                <h2>Craft Your Story with Seamless Precision</h2>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column gspace-2">
+                                <p>Our professional video editing service is designed to bring your vision to life with clarity, emotion, and cinematic style. Whether you're a brand, content creator, filmmaker, or agency — we take your raw footage and turn it into a polished, engaging story that captures your audience's attention.</p>
+                                <p>We don't just cut clips — we edit with intention. Every transition, every frame, every color tone is carefully adjusted to ensure the final result reflects your message, aesthetic, and purpose.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column gspace-3">
+                        <h3>What's Included in Our Video Editing Service:</h3>
+                        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
+                            <div class="col">
+                                <div class="card card-service-detail-include">
+                                    <div class="d-flex flex-row align-items-center gspace-1">
+                                        <i class="fa-solid fa-circle accent-color"></i>
+                                        <h5>Multi-Cam Footage Syncing & Cutting</h5>
+                                    </div>
+                                    <p>Flawless synchronization of various camera angles for smooth storytelling.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-service-detail-include">
+                                    <div class="d-flex flex-row align-items-center gspace-1">
+                                        <i class="fa-solid fa-circle accent-color"></i>
+                                        <h5>Color Correction & Color Grading</h5>
+                                    </div>
+                                    <p>Balanced tones and cinematic looks to enhance mood and emotion.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-service-detail-include">
+                                    <div class="d-flex flex-row align-items-center gspace-1">
+                                        <i class="fa-solid fa-circle accent-color"></i>
+                                        <h5>Sound Design & Audio Mixing</h5>
+                                    </div>
+                                    <p>Crystal-clear dialogue, immersive sound effects, and licensed background music.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-service-detail-include">
+                                    <div class="d-flex flex-row align-items-center gspace-1">
+                                        <i class="fa-solid fa-circle accent-color"></i>
+                                        <h5>Motion Graphics & Title Animation</h5>
+                                    </div>
+                                    <p>Custom lower-thirds, intros, and transitions that add professional flair.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-service-detail-include">
+                                    <div class="d-flex flex-row align-items-center gspace-1">
+                                        <i class="fa-solid fa-circle accent-color"></i>
+                                        <h5>Revisions & Collaboration</h5>
+                                    </div>
+                                    <p>enjoy a collaborative process with rounds of edits to perfect your video.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-service-detail-include cta-card">
+                                    <div class="service-detail-cta-container">
+                                        <h3>Ready to Get Started?</h3>
+                                        <a href="./contact.html" class="btn btn-service-detail-cta">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-lg-2 row-cols-1 grid-spacer-3">
+                        <div class="col order-2 order-lg-1">
+                            <div class="d-flex flex-column gspace-2">
+                                <h3>Why Choose Us?</h3>
+                                <p>With years of experience in the film and video production industry, our editors understand the language of storytelling. We use industry-standard software (Adobe Premiere Pro, After Effects, DaVinci Resolve) and deliver in formats optimized for all platforms — from cinema screens to TikTok reels.</p>
+                                <ul class="service-detail-list">
+                                    <li>Fast Turnaround</li>
+                                    <li>Professional-Grade Quality</li>
+                                    <li>Tailored to Your Brand & Audience</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col order-1 order-lg-2">
+                            <div class="image-container">
+                                <img src="./assets/images/dummy-img-600x400.jpg" alt="Service-detail-image" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1 grid-spacer-3">
+                        <div class="col col-lg-8 col-md-6">
+                            <div class="image-container service-detail-ideal-img">
+                                <img src="./assets/images/dummy-img-600x400.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6">
+                            <div class="d-flex flex-column gspace-2">
+                                <h3>Ideal For</h3>
+                                <ul class="service-detail-list">
+                                    <li>Brand Commercials</li>
+                                    <li>Social Media Content</li>
+                                    <li>Music Videos</li>
+                                    <li>Corporate Videos</li>
+                                    <li>Short Films & Documentaries</li>
+                                    <li>YouTube Content Creators</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="section pt-0">
+            <div class="hero-container">
+                <div class="contact-cta-banner">
+                    <div class="contact-cta-title-container">
+                        <h2 class="contact-cta-title heading-fill">
+                            Let's Turn Your Vision Into Cinematic Reality
+                        </h2>
+                        <h2 class="contact-cta-title heading-stroke">
+                            Let's Turn Your Vision Into Cinematic Reality
+                        </h2>
+                    </div>
+                    <div class="contact-cta-text-container">
+                        <p>
+                            From concept development to post-production, we craft cinematic experiences that captivate and inspire. Let's create something extraordinary together.
+                        </p>
+                        <div>
+                            <a href="./contact.html" class="btn btn-accent-primary">
+                                Free Consultation
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-cta-image">
+                        <img src="./assets/images/dummy-img-600x800.jpg" alt="Contact CTA" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="section-footer">
+            <div class="hero-container">
+                <div class="footer-container">
+                    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
+                        <div class="col col-lg-3 col-md-6">
+                            <div class="d-flex flex-column gspace-2">
+                                <h3>Montra - Film & Video Production</h3>
+                                <div class="d-flex flex-column gspace-1">
+                                    <h5>Our Office</h5>
+                                    <div class="footer-info-container">
+                                        <span class="footer-info">123 Montra Studio Bulevard., Los Angeles, CA 90210</span>
+                                    </div>
+                                    <div class="footer-info-container">
+                                        <h5>Contact Us</h5>
+                                        <span class="footer-info">+1 (800) 234-5678</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6">
+                            <div class="d-flex flex-column gspace-3">
+                                <h4>Navigation</h4>
+                                <ul class="chevron-circle-list">
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about.html">About Us</a></li>
+                                    <li><a href="./services.html">Services</a></li>
+                                    <li><a href="./project.html">Portfolio</a></li>
+                                    <li><a href="./blog.html">Blog</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6 col-md-12">
+                            <div class="footer-newsletter-container">
+                                <h5 class="container-title">Subscribe to our newsletter for the latest updates</h5>
+                                <div id="newsletter-success" class="alert success hidden">
+                                    <span class="check-icon"><i class="fa-solid fa-2xl fa-check"></i></span>
+                                    <p class="text-center">Thank you! Form submitted successfully.</p>
+                                </div>
+                            
+                                <div id="newsletter-error" class="alert error hidden">
+                                    <span class="cross-icon"><i class="fa-solid fa-2xl fa-xmark"></i></span>
+                                    <p class="text-center">Oops! Form submission failed. Please try again.</p>
+                                </div>
+                                <form id="newsletter-form" action="./assets/php/submit-newsletter.php" class="form" method="post">
+                                    <input type="email" id="newsletter" name="newsletter" placeholder="Hello@Montrastudio.com">
+                                    <button type="submit" class="btn btn-accent-primary">Subscribe Now</button>
+                                </form>
+            
+                                <div class="d-flex flex-row gspace-1 align-items-center w-100 justify-content-between flex-wrap">
+                                    <h5>Social Media</h5>
+                                    <div class="social-footer-container">
+                                        <a href="https://www.instagram.com/" class="footer-icon">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/" class="footer-icon">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                        <a href="https://www.x.com/" class="footer-icon">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/" class="footer-icon">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-title-container">
+                        <span class="footer-title">Montra Studio</span>
+                    </div>
+                    <div class="footer-copyright-container">
+                        <a href="#" class="legallink">Privacy Policy</a>
+                        <span class="copyright">© 2025 Montra Studio. All rights reserved.</span>
+                        <a href="#" class="legallink">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/vendor/jquery.min.js"></script>
+    <script src="./assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/swiper-script.js"></script>
+    <script src="./assets/js/submit-form.js"></script>
+    <script src="./assets/js/video_embedded.js"></script>
+</body>
+</html>

@@ -1257,7 +1257,7 @@ ul {
 }
 
 .banner-inner.service-detail-banner::before {
-    background-image: url('../images/dummy-img-1920x900-2.jpg');
+    background-image: url('../images/video\ production.jpg');
 }
 
 .banner-inner.pricing-banner::before {
@@ -2706,6 +2706,10 @@ ul {
 .recent-blog-item:hover .recent-blog-heading {
     color: var(--accent-color);
     transition: 0.2s ease;
+}
+
+.section-cta-contact {
+    padding: 120px 20px 100px 20px;
 }
 
 

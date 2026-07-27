@@ -6,7 +6,7 @@ function sanitize($str)
     return htmlspecialchars(trim($str), ENT_QUOTES, 'UTF-8');
 }
 
-$email = sanitize($_POST['email'] ?? '');
+$email = sanitize($_POST['newsletter'] ?? $_POST['email'] ?? '');
 
 if ($email === '') {
     echo json_encode(["status" => "error", "message" => "Email required"]);

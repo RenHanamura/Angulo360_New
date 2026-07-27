@@ -1249,7 +1249,8 @@ ul {
 }
 
 .banner-inner.about-banner::before {
-    background-image: url('../images/dummy-img-1920x900-2.jpg');
+    background-image: url('../images/about\ us.png');
+
 }
 
 .banner-inner.service-banner::before {

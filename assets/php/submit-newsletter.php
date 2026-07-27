@@ -21,7 +21,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $to = "contacto@angulo360.info";
 
 $subject = "Idea de proyecto";
-$body = "A new user subscribed to your newsletter:\nEmail: $email";
+$body = "Prueba de correo:\nEmail: $email";
 $headers = "From: $email\r\nReply-To: $email\r\n";
 
 if (mail($to, $subject, $body, $headers)) {

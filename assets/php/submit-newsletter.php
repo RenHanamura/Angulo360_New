@@ -1,7 +1,8 @@
 <?php
 header('Content-Type: application/json');
 
-function sanitize($str) {
+function sanitize($str)
+{
     return htmlspecialchars(trim($str), ENT_QUOTES, 'UTF-8');
 }
 
@@ -17,9 +18,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$to = "your-email@example.com";
+$to = "contacto@angulo360.info";
 
-$subject = "New Newsletter Subscription";
+$subject = "Idea de proyecto";
 $body = "A new user subscribed to your newsletter:\nEmail: $email";
 $headers = "From: $email\r\nReply-To: $email\r\n";
 

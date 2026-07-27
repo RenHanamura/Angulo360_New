@@ -6,8 +6,6 @@ $(function () {
     initSidebarDropdown();
     initCounter();
     initCustomDropdown();
-    initSubmitContact();
-    initSubmitNewsletter();
 });
 
 // ===============================================

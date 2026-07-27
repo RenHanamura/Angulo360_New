@@ -1,16 +1,17 @@
 <?php
 header('Content-Type: application/json');
 
-function sanitize($str) {
+function sanitize($str)
+{
     return htmlspecialchars(trim($str), ENT_QUOTES, 'UTF-8');
 }
 
-$name        = sanitize($_POST['name'] ?? '');
-$email       = sanitize($_POST['email'] ?? '');
-$phone       = sanitize($_POST['phone'] ?? '');
-$subject     = sanitize($_POST['subject'] ?? '');
+$name = sanitize($_POST['name'] ?? '');
+$email = sanitize($_POST['email'] ?? '');
+$phone = sanitize($_POST['phone'] ?? '');
+$subject = sanitize($_POST['subject'] ?? '');
 $projectType = sanitize($_POST['project-type'] ?? '');
-$message     = sanitize($_POST['message'] ?? '');
+$message = sanitize($_POST['message'] ?? '');
 
 if ($name === '' || $email === '' || $subject === '' || $message === '') {
     echo json_encode(["status" => "error", "message" => "Required fields missing"]);
@@ -22,12 +23,12 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$to = "your-email@example.com";
+$to = "contacto@angulo360.info";
 
-$email_subject = "New Contact Form Submission: $subject";
+$email_subject = "Formulario de contacto: $subject";
 
 $email_body = "
-You received a new message from your website contact form:
+Nuevo mensaje recibido del formulario de contacto:
 
 Name: $name
 Email: $email

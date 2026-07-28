@@ -1,6 +1,12 @@
 function initSubmitNewsletter() {
-    $('#newsletter-form').on('submit', function(event) {
+    const $form = $('#newsletter-form');
+    const $submitButton = $form.find('button').first();
+    let isSubmitting = false;
+
+    $form.off('submit.newsletterForm').on('submit.newsletterForm', function(event) {
         event.preventDefault();
+
+        if (isSubmitting) return;
 
         var $email = $('#newsletter');
         var $successMessage = $('#newsletter-success');
@@ -15,6 +21,9 @@ function initSubmitNewsletter() {
         var isValid = validateEmail(emailValue);
 
         if (isValid) {
+            isSubmitting = true;
+            $submitButton.prop('disabled', true);
+
             $.ajax({
                 url: $(this).attr('action'),
                 type: 'POST',
@@ -24,11 +33,15 @@ function initSubmitNewsletter() {
                     if (response.status === 'success') {
                         $successMessage.removeClass('hidden');
                         $('#newsletter-form')[0].reset();
+                        isSubmitting = false;
+                        $submitButton.prop('disabled', false);
                         setTimeout(function() {
                             $successMessage.addClass('hidden');
                         }, 3000);
                     } else {
                         $errorMessage.removeClass('hidden');
+                        isSubmitting = false;
+                        $submitButton.prop('disabled', false);
                         setTimeout(function() {
                             $errorMessage.addClass('hidden');
                         }, 3000);
@@ -41,11 +54,15 @@ function initSubmitNewsletter() {
                         console.warn("Simulación local: PHP no está disponible en este servidor estático (Error " + xhr.status + "). Mostrando mensaje de éxito.");
                         $successMessage.removeClass('hidden');
                         $('#newsletter-form')[0].reset();
+                        isSubmitting = false;
+                        $submitButton.prop('disabled', false);
                         setTimeout(function() {
                             $successMessage.addClass('hidden');
                         }, 3000);
                     } else {
                         $errorMessage.removeClass('hidden');
+                        isSubmitting = false;
+                        $submitButton.prop('disabled', false);
                         setTimeout(function() {
                             $errorMessage.addClass('hidden');
                         }, 3000);
@@ -65,11 +82,17 @@ function initSubmitContact() {
     const $form = $('#contact-form');
     const $success = $('#success-message');
     const $error = $('#error-message');
+    const $submitButton = $form.find('button').first();
+    let isSubmitting = false;
 
     if (!$form.length) return;
 
-    $form.on('submit', function (event) {
+    // Evita registrar el mismo manejador más de una vez si el script se carga repetido.
+    $form.off('submit.contactForm').on('submit.contactForm', function (event) {
         event.preventDefault();
+
+        // Evita dos POST por doble clic o por dos eventos submit consecutivos.
+        if (isSubmitting) return;
 
         const name = $('#name').val().trim();
         const email = $('#email').val().trim();
@@ -96,6 +119,7 @@ function initSubmitContact() {
         }
 
         if (isValid) {
+
             $.ajax({
                 url: $form.attr('action'),
                 type: 'POST',
@@ -111,6 +135,8 @@ function initSubmitContact() {
                         }, 3000);
                     } else {
                         $error.removeClass('hidden');
+                        isSubmitting = false;
+                        $submitButton.prop('disabled', false);
                         setTimeout(() => {
                             $error.addClass('hidden');
                         }, 3000);
@@ -128,6 +154,8 @@ function initSubmitContact() {
                         }, 3000);
                     } else {
                         $error.removeClass('hidden');
+                        isSubmitting = false;
+                        $submitButton.prop('disabled', false);
                         setTimeout(() => {
                             $error.addClass('hidden');
                         }, 3000);

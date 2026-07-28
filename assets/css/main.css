@@ -1254,7 +1254,7 @@ ul {
 }
 
 .banner-inner.service-banner::before {
-    background-image: url('../images/dummy-img-1920x900-2.jpg');
+    background-image: url('../images/services.jpg');
 }
 
 .banner-inner.service-detail-banner::before {
@@ -1294,7 +1294,7 @@ ul {
 }
 
 .banner-inner.contact-banner::before {
-    background-image: url('../images/dummy-img-1920x900-2.jpg');
+    background-image: url('../images/contacto.jpg');
 }
 
 .banner-inner-container {
